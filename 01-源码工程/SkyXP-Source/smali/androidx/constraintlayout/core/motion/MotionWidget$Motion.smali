@@ -1,0 +1,84 @@
+.class public Landroidx/constraintlayout/core/motion/MotionWidget$Motion;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field private static final INTERPOLATOR_REFERENCE_ID:I = -0x2
+
+.field private static final INTERPOLATOR_UNDEFINED:I = -0x3
+
+.field private static final SPLINE_STRING:I = -0x1
+
+
+# instance fields
+.field public mAnimateCircleAngleTo:I
+
+.field public mAnimateRelativeTo:Ljava/lang/String;
+
+.field public mDrawPath:I
+
+.field public mMotionStagger:F
+
+.field public mPathMotionArc:I
+
+.field public mPathRotate:F
+
+.field public mPolarRelativeTo:I
+
+.field public mQuantizeInterpolatorID:I
+
+.field public mQuantizeInterpolatorString:Ljava/lang/String;
+
+.field public mQuantizeInterpolatorType:I
+
+.field public mQuantizeMotionPhase:F
+
+.field public mQuantizeMotionSteps:I
+
+.field public mTransitionEasing:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mAnimateRelativeTo:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mAnimateCircleAngleTo:I
+
+    iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mTransitionEasing:Ljava/lang/String;
+
+    const/4 v2, -0x1
+
+    iput v2, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mPathMotionArc:I
+
+    iput v1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mDrawPath:I
+
+    const/high16 v1, 0x7fc00000    # Float.NaN
+
+    iput v1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mMotionStagger:F
+
+    iput v2, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mPolarRelativeTo:I
+
+    iput v1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mPathRotate:F
+
+    iput v1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mQuantizeMotionPhase:F
+
+    iput v2, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mQuantizeMotionSteps:I
+
+    iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mQuantizeInterpolatorString:Ljava/lang/String;
+
+    const/4 v0, -0x3
+
+    iput v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mQuantizeInterpolatorType:I
+
+    iput v2, p0, Landroidx/constraintlayout/core/motion/MotionWidget$Motion;->mQuantizeInterpolatorID:I
+
+    return-void
+.end method

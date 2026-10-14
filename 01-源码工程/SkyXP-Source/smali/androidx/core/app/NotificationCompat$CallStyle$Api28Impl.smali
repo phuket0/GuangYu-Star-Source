@@ -1,0 +1,28 @@
+.class Landroidx/core/app/NotificationCompat$CallStyle$Api28Impl;
+.super Ljava/lang/Object;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static addPerson(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static castToParcelable(Landroid/app/Person;)Landroid/os/Parcelable;
+    .locals 0
+
+    return-object p0
+.end method

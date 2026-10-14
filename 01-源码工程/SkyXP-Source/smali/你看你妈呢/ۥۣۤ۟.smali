@@ -1,0 +1,57 @@
+.class public L你看你妈呢/ۥۣۤ۟;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final ۦۦۧۥ:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+.field final ۦۦۧۦ:Landroidx/appcompat/widget/ActionMenuView;
+
+.field final ۦۦۧۧ:I
+
+.field final ۦۦۧۨ:Z
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/material/bottomappbar/BottomAppBar;Landroidx/appcompat/widget/ActionMenuView;IZ)V
+    .locals 0
+
+    iput-object p1, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۥ:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+    iput-object p2, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۦ:Landroidx/appcompat/widget/ActionMenuView;
+
+    iput p3, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۧ:I
+
+    iput-boolean p4, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۨ:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 4
+
+    iget-object v0, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۦ:Landroidx/appcompat/widget/ActionMenuView;
+
+    iget-object v1, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۥ:Lcom/google/android/material/bottomappbar/BottomAppBar;
+
+    iget v2, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۧ:I
+
+    iget-boolean v3, p0, L你看你妈呢/ۥۣۤ۟;->ۦۦۧۨ:Z
+
+    invoke-virtual {v1, v0, v2, v3}, Lcom/google/android/material/bottomappbar/BottomAppBar;->ۦ(Landroidx/appcompat/widget/ActionMenuView;IZ)I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ActionMenuView;->setTranslationX(F)V
+
+    return-void
+.end method
