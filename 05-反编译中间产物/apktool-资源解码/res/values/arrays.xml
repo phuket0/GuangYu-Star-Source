@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="xposed_scope">
+        <item>com.netease.sky</item>
+        <item>com.netease.sky.vivo</item>
+        <item>com.netease.sky.mi</item>
+        <item>com.netease.sky.huawei</item>
+        <item>com.netease.sky.bilibili</item>
+        <item>com.netease.sky.aligames</item>
+        <item>com.netease.sky.m4399</item>
+        <item>com.netease.sky.nearme.gamecenter</item>
+        <item>com.netease.skz</item>
+        <item>com.tencent.tmgp.eyou.eygy</item>
+    </string-array>
+</resources>
