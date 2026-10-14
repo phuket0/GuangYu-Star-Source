@@ -2,6 +2,8 @@
 
 **《光遇》（Sky: Children of the Light）国服外挂模块「Star 插件 / SkyXP」的反编译还原源码工程。**
 
+> 📦 **Releases**：已发布《Star 插件 2026-10-13 版》逆向产物 —— [未加密二次打包 APK + 逆向源码包](https://github.com/phuket0/GuangYu-WaiGua-Reverse-Source/releases/tag/star-plugin-2026-10-13)
+>
 > ✅ **本项目借助 REA（Reverse Engineer Anything，v6.4.0 + JADX 0.7.1 引擎）完成反编译、字符串解密与二次打包，重打包后的 APK 经签名校验可正常安装使用。**
 
 ---
