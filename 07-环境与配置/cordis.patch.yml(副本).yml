@@ -1,0 +1,98 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: deepseek-account
+    model: deepseek-flash
+    reasoningEffort: off
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: browserskill
+  name: "@wxg-prc-cpg/browser-skill-dsh-plugin"
+  config:
+    bskPath: C:\Users\Administrator\.local\bin\bsk.exe
+    defaultTimeoutMs: 120000
+    maxSessions: 5
+    observationEnabled: true
+    thumbnailIntervalMs: 1500
+    idleIntervalMs: 8000
+    lazyTools: true
+- id: mnemon-strategy-auto-capture
+  disabled: false
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 关掉 DSH 界面里的余额挂件（小鲸鱼）。
+#
+# 原因：桌面上已经在跑同一个挂件的「桌面宠物版」（dsh-whale-pet），
+# 而 DSH 窗口右下角也会画出这个挂件。DSH 最大化时两者会叠在同一个角落，
+# 看起来像「有两个宠物」。桌面宠物版功能是它的超集（且共用同一份账本/设置/素材），
+# 所以这里把 DSH 内的那个关掉。
+#
+# 想恢复（让 DSH 里也显示挂件）：删掉下面这两行，然后重启 DeepSeek Harness。
+#   - id: dsh-whale-widget
+#     disabled: true
+# ─────────────────────────────────────────────────────────────────────────────
+- id: dsh-whale-widget
+  disabled: true
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers: {}
+
+# REA MCP server (morluto/rea 6.4.0; stable copy + DSH runtime node, 2026-10-14).
+# It must be an INSERT list: a plain id/name entry only targets an existing id and is
+# skipped at boot with "patch: entry rea-mcp not found". Tools appear as mcp__rea__<tool>.
+- insert:
+    - id: rea-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: rea
+        transport: stdio
+        toolCallTimeoutMs: 900000
+        command: 'C:\Users\Administrator\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe'
+        args:
+          - 'C:\Users\Administrator\.rea\node_modules\rea-agents\scripts\rea.mjs'
+          - mcp
+        env:
+          REA_ADB_PATH: 'C:\platform-tools\adb.exe'
+          REA_APKTOOL_COMMAND: 'C:\Users\Administrator\apktool\apktool.exe'
+          GHIDRA_INSTALL_DIR: 'C:\Users\Administrator\ghidra_12.1.4_PUBLIC'
+          JAVA_HOME: 'C:\Users\Administrator\jdk-21\jdk-21.0.12.1+1'
+          REA_JADX_MCP_JAR: 'C:\Users\Administrator\.rea\android\jadx-headless-mcp-0.7.1-all.jar'
+- id: better-sidebar
+  name: dsh-better-sidebar
+  config:
+    workspaceFence: false
