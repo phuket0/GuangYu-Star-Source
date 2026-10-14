@@ -1,0 +1,7 @@
+.class public interface abstract Landroidx/core/view/accessibility/AccessibilityManagerCompat$TouchExplorationStateChangeListener;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract onTouchExplorationStateChanged(Z)V
+.end method

@@ -1,0 +1,26 @@
+.class public final Landroidx/lifecycle/SavedStateHandleSupport$DEFAULT_ARGS_KEY$1;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroidx/lifecycle/viewmodel/CreationExtras$Key;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroidx/lifecycle/viewmodel/CreationExtras$Key<",
+        "Landroid/os/Bundle;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
