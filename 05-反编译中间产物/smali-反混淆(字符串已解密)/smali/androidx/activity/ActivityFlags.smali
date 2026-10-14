@@ -1,0 +1,34 @@
+.class public final Landroidx/activity/ActivityFlags;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static final INSTANCE:Landroidx/activity/ActivityFlags;
+
+.field public static isOnBackPressedLifecycleOrderMaintained:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroidx/activity/ActivityFlags;
+
+    invoke-direct {v0}, Landroidx/activity/ActivityFlags;-><init>()V
+
+    sput-object v0, Landroidx/activity/ActivityFlags;->INSTANCE:Landroidx/activity/ActivityFlags;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Landroidx/activity/ActivityFlags;->isOnBackPressedLifecycleOrderMaintained:Z
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

@@ -1,0 +1,60 @@
+.class final Landroidx/collection/ArrayMap$KeyIterator;
+.super Landroidx/collection/IndexBasedArrayIterator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/collection/IndexBasedArrayIterator<",
+        "TK;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final this$0:Landroidx/collection/ArrayMap;
+
+
+# direct methods
+.method constructor <init>(Landroidx/collection/ArrayMap;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {p1}, Landroidx/collection/ArrayMap;->size()I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Landroidx/collection/IndexBasedArrayIterator;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected elementAt(I)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TK;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method protected removeAt(I)V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/collection/ArrayMap$KeyIterator;->this$0:Landroidx/collection/ArrayMap;
+
+    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->removeAt(I)Ljava/lang/Object;
+
+    return-void
+.end method
